@@ -15,7 +15,7 @@ dependencies:
 ## Usage
 
 ```crystal
-require "crystal-objectid"
+require "objectid"
 
 ObjectId.new
 ```
