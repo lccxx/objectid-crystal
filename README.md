@@ -4,10 +4,10 @@ simple implement mongodb bson objectid
 
 The 12-byte ObjectId value consists of:
 
-a 4-byte value representing the seconds since the Unix epoch,
-a 3-byte machine identifier,
-a 2-byte process id, and
-a 3-byte counter, starting with a random value.
+* a 4-byte value representing the seconds since the Unix epoch,
+* a 3-byte machine identifier,
+* a 2-byte process id, and
+* a 3-byte counter, starting with a random value.
 
 see: https://docs.mongodb.com/manual/reference/method/ObjectId
 
