@@ -2,6 +2,15 @@
 
 simple implement mongodb bson objectid
 
+The 12-byte ObjectId value consists of:
+
+a 4-byte value representing the seconds since the Unix epoch,
+a 3-byte machine identifier,
+a 2-byte process id, and
+a 3-byte counter, starting with a random value.
+
+see: https://docs.mongodb.com/manual/reference/method/ObjectId
+
 ## Installation
 
 Add this to your application's `shard.yml`:
@@ -19,9 +28,11 @@ require "objectid-crystal"
 
 ObjectId.new
 
-ObjectId.new Time.now.epoch
+ObjectId.new 16  # base 16
 
-ObjectId.new Time.new(2016, 2, 15, 10, 20, 30).epoch, 16
+ObjectId.new 16, Time.now.epoch
+
+ObjectId.new 36, Time.new(2016, 2, 15, 10, 20, 30).epoch
 ```
 
 ## Development
