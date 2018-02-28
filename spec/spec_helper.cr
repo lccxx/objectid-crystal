@@ -1,2 +1,2 @@
 require "spec"
-require "../src/objectid"
+require "../src/objectid-crystal"

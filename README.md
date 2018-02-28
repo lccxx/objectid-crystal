@@ -15,9 +15,13 @@ dependencies:
 ## Usage
 
 ```crystal
-require "objectid"
+require "objectid-crystal"
 
 ObjectId.new
+
+ObjectId.new Time.now.epoch
+
+ObjectId.new Time.new(2016, 2, 15, 10, 20, 30).epoch, 16
 ```
 
 ## Development
