@@ -2,7 +2,9 @@ require "./spec_helper"
 
 describe ObjectId do
   it "works" do
-    ObjectId.new.size.should eq 19
+    id : String = ObjectId.new
+
+    id.size.should eq 19
 
     ObjectId.new(16).size.should eq 24
 

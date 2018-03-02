@@ -1,6 +1,6 @@
 require "big"
 
-class ObjectId
+module ObjectId
   MID = macaddr[6,6]
   PID = (Process.pid | 0x1000).to_s(16)
   COUNTER = Atomic.new Random.new.next_int.abs
