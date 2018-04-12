@@ -6,7 +6,7 @@ module ObjectId
   COUNTER = Atomic.new Random.new.next_int.abs
 
   def self.new(base=36, timestamp=Time.now.epoch)
-    counter = (COUNTER.add(1).abs | 0x10000000).to_s(16)[2,6]
+    counter = (COUNTER.add(1).abs | 0x40000000).to_s(16)[2,6]
     BigInt.new("#{timestamp.to_s(16)}#{MID}#{PID}#{counter}", 16).to_s base
   end
 
