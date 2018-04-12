@@ -1,4 +1,4 @@
-# objectid-crystal
+# objectid-crystal [![Build Status](https://api.travis-ci.org/liu-chong/objectid-crystal.svg)](https://travis-ci.org/liu-chong/objectid-crystal)
 
 simple implement mongodb bson objectid
 
