@@ -15,7 +15,7 @@ module ObjectId
     if File.exists?(dir)
       devs = Dir.open(dir).children
       if devs.size > 0
-        return File.open(File.join(dir, devs.first, "address")).read_line.strip.gsub(":", "")
+        return File.open(File.join(dir, devs.sort.first, "address")).read_line.strip.gsub(":", "")
       end
     end
     12.times.map { (rand * 16).to_i8.to_s(16) }.join
