@@ -8,7 +8,7 @@ describe ObjectId do
 
     ObjectId.new(16).size.should eq 24
 
-    timestamp = Time.new(2016, 2, 15, 10, 20, 30).epoch
+    timestamp = Time.new(2016, 2, 15, 10, 20, 30).to_unix
     id = ObjectId.new(16, timestamp)
     id[0,8].to_i(16).should eq timestamp
 
@@ -18,7 +18,7 @@ describe ObjectId do
   it "check" do
     ids = Array(String).new
     99999.times { |i|
-      timestamp = Time.now.epoch
+      timestamp = Time.now.to_unix
       id = ObjectId.new 36, timestamp
       id.size.should eq 19
       id16 = BigInt.new(id, 36).to_s(16)
